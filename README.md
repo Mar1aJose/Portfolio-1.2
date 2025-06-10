@@ -1,5 +1,7 @@
 Personal portfolio . Test Module 2
 
+web: https://mar1ajose.github.io/Portfolio-1.2/PortafolioMJA/Html/index.html
+
 Hi, I'm Maria José and this is my final project for the performance test of Module 2. 
 In this portfolio I apply the knowledge acquired in HTML, CSS, responsive design, Flexbox and Grid, to build a functional personal website, 
 visually attractive and adaptable to different devices.
