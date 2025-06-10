@@ -1,0 +1,266 @@
+/*It is for the margin of the entire page, so the header and footer each remain in their position, without leaving spaces. */* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*Include the html and body to size the height, margin, and direction of the elements */html, body {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+/*HEADER: 
+Color design, size, center direction, center items, space between elements and content, and add a shadow to the header box*/
+header {
+  background-color: #04333d;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  
+}
+
+/*To the navigation list or main items in the header, we add display flex to center the elements, 
+align them, define the size of each text, and remove the default CSS decoration from the lists. */
+.nav-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  list-style: none;
+}
+
+
+/*NAV-LIST:
+We remove the dots and lines from the list, use display flex to center the items, 
+add justify and align items-center, a gap to add padding 0, and margin 0, eliminating spaces between the inner box (content) and the outer box (border)*/
+.nav-list ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+/*We add color to the header text, remove default list decoration, define text font width, padding, and border radius to round corners.
+We add a color transition for each text. */
+.nav-list a{
+  color: white;
+  text-decoration: none;
+  font-weight: 300;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+}
+
+/*We add background color, effects, color and remove default decoration from the lists */
+.nav-list a:hover,
+.nav-list a.active {
+  background-color: #41555a;
+  transform: scale(1.05);
+  color: white;
+  text-decoration: none;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+
+}
+
+
+/* MAIN:
+Add layout for the main, h1, and p sections.*/
+main.section {
+  flex: 1;
+  padding: 2rem;
+  text-align: center;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+
+/* ABOUT ME:
+We used display flex to center the elements, adding justify and align items-center, a gap to add size,
+padding 0, and margin 0, removing spaces between the inner box (content) and the outer box (border), adding a background color, and rounding the corners */
+.sobre-mi-contenedor {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 3rem 2rem;
+  background-color: #f9f9f9;
+  border-radius: 1rem;
+}
+
+/* MAIN:
+Add maximum size for an element, automatic width and height, round corners, and add a shadow to the element. */
+.foto-sobre-mi {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/*We add design for the text section p.*/
+.texto-sobre-mi {
+  max-width: 600px;
+  text-align: left;
+}
+
+/*We add design for the text section p., size color and margin*/
+.texto-sobre-mi h1 {
+  font-size: 2.5rem;
+  color: #04333d;
+  margin-bottom: 1rem;
+}
+
+.texto-sobre-mi p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+/* PORTFOLIO:
+We add dynamism by activating the display grid, adding size, aligning columns, and repeating it 1fr and adding margin. */
+.portfolio-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  margin-top: 2rem;
+}
+
+/*Card background color, size, space between elements and we add a shadow to the card*/
+.project-card {
+  background-color: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/*We add animation and shadow to the card*/
+.project-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+}
+
+/*We add margin and color to the button inside the card*/
+.project-card h2 {
+  margin-bottom: 0.5rem;
+  color: #04333d;
+}
+
+/*We used display flex to align elements, margin 0, removing spaces between the inner box (content) and the outer box (border)*, 
+we added color, removed default decoration from lists, added text design, and added a transition*/
+.project-card a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #00c6a7;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+/*We add animation and shadow to the card*/
+.project-card a:hover {
+  color: #007e6a;
+}
+
+
+/* CONTACT FORM:
+We use display flex to send the elements to the center, adding flex direction to give a main axis and align center to send the , a gap to add size,
+and margin auto, max width for size. */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+/*We add size, space between elements, border corners and define text font*/
+input, textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-family: inherit;
+}
+
+/*Add background color, text color, remove border, add size, border corners, add animation and transition*/
+button {
+  background: #00bcd4;
+  color: white;
+  border: none;
+  padding: 0.75rem 2rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+/*We add animation*/
+button:hover {
+  background: #0097a7;
+}
+
+
+/* FOOTER:
+Add background color, text color, align text, add size and autosize to the margin*/
+footer {
+  background-color: #04333d;
+  color: white;
+  text-align: center;
+  padding: 2rem;
+  margin-top: auto;
+}
+
+/*We added margin size to social media icons*/
+.social-icons{
+  margin: 1rem 0;
+}
+
+/*Add margin size, align elements and add transition */.social-icons{
+  margin: 0 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+/*We add animation and shadow to each icon */
+.social-icons a:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 188, 212, 0.4);
+}
+
+/*Add margin size, align elements and add transition */
+.social-icons img {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+
+/* RESPONSIVE TEXT:
+We add responsive */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  .nav-list ul {
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+  }
+}
